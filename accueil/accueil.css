@@ -1,3 +1,11 @@
+:root{
+    --gris-clair : #EEEEEE;
+    --vert : #008374 ; 
+    --vert-clair : #88C2BC ; 
+    --vert-plus-clair : #D2EEEB ; 
+    --orange : #F95F40;
+
+}
 /* Debut section menu */
 
 /* Fin section menu */
@@ -10,7 +18,98 @@
 
 /* Debut section sevices */
 
+.services , .teams {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+.services .ligne , .teams .ligne{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    z-index: 1;
+    margin-bottom: 17px;
+
+}
+.services .ligne  .service{
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 10px 0 10px;
+    z-index: 1;
+    padding: 25px;
+    box-shadow: 7px 7px 2px var(--gris-clair);
+
+}
+.services .ligne  .service:hover{
+    background-color: var(--vert);
+    color: white;
+
+}
+.services .ligne .service .service-icon i{
+    z-index: 1;
+}
+.services .ligne .service .service-icon div{
+    height: 25px;
+    width: 25px;
+    background-color: var(--gris-clair);
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    left: -14px;
+    z-index: -1;
+}
+.services .ligne .service .service-title , .teams .ligne .team .team-title{
+    width: 39%;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.services .ligne .service .service-body .texte{
+    font-size: 13px;
+    line-height: 20px;
+    text-align: justify;
+}
+.services .ligne .service .service-title hr{
+    height: 2px;
+    background-color: var(--gris-clair);
+    border: none;
+
+}
+
+
+#read-more{
+    color: var(--vert);
+}
+
+@media screen and (width <= 768px) {
+    
+    .services .ligne{
+        display: grid;
+        grid-template-columns: auto  ;
+    
+    }
+
+    .services .ligne  .service{
+        margin-bottom: 17px;
+    
+    }
+    .teams .ligne{
+        display: grid;
+        grid-template-columns: auto  ;
+    
+    }
+
+    .teams .ligne  .team{
+        margin-bottom: 17px;
+    
+    }
+
+    /* pour team */
+}
+
 /* Fin section sevices */
+
 
 
 
@@ -21,13 +120,117 @@
 
 
 /* Debut section team */
+.teams .ligne .team{
+    margin-top: 40px;
+
+
+}
+
+.teams .ligne .team{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 7px 7px 2px var(--gris-clair);
+    margin-right: 150px;
+    width: 93%;
+
+
+}
+.teams .ligne .team .team-image {
+    width: 100%;
+}
+.teams .ligne .team .team-image img{
+    width: 100%;
+}
+
 
 /* Fin section team */
 
 
 
 /* Debut section pricing */
+.pricings{
+    justify-content: center;
+    margin: 100px auto;
+    width: 90%;
+}
 
+.pricings .ligne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 95%;
+}
+.pricings .ligne .pricing{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 7px 7px 2px var(--gris-clair);
+    border-radius: 10px;
+
+
+}
+.pricings .ligne .pricing .pricing-title , .pricings .ligne .pricing .pricing-icon {
+
+    text-align: center;
+    margin-top: 10px;
+
+}
+.pricings .ligne .pricing .pricing-price{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.fa-check{
+    color: var(--vert);
+}
+.bi-x-lg{
+    color: var(--gris-clair);
+}
+#icon{
+    padding: 9px;
+    background-color: var(--vert);
+    color: white;
+    border-radius: 50%;
+}
+.pricings .ligne .pricing .pricing-icon div div{
+    background-color: var(--vert-clair);
+    color: white;
+    border-radius: 50%;
+    display: inline;
+    padding: 15px 5px;
+}
+.pricings .ligne .pricing .pricing-icon div{
+    background-color: var(--vert-plus-clair);
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 20px 5px;
+    align-items: center;
+}
+.pricings .ligne .pricing .pricing-price .dollar-indice {
+    color: var(--orange);
+    font-size: 19px;
+    position: relative;
+    top: -15px;
+}
+
+.pricings .ligne .pricing .pricing-price .price{
+    color: var(--orange);
+    font-size: 40px;
+    margin: 0;
+}
+.pricings .ligne .pricing .pricing-price .month{
+    color: #000;
+    font-weight: 100;   
+    position: relative;
+    top: 10px;
+
+}
+#pricing2{
+    transform: scale(1.2);
+    border: 1px solid var(--vert);
+}
 /* Fin section pricing */
 
 
@@ -52,3 +255,5 @@
 /* Debut section footer */
 
 /* Fin section footer */
+
+

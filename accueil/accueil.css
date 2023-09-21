@@ -5,6 +5,92 @@
 
 /* Debut section a propos */
 
+.sectionpropos{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 40px;
+}
+.left{
+    /* background-color: aqua; */
+}
+.left p{
+    line-height: 20px;
+}
+.right{
+    /* background-color: brown; */
+}
+.right p{
+    line-height: 20px;
+}
+.right span{
+    line-height: 30px;
+}
+#first{
+    line-height: 20px;
+}
+.left img{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+}
+.right img{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+@media screen and (width <= 767px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    .sectionpropos{
+        display: flex;
+        flex-direction: column;
+    }
+    .left img{
+        width: 350px;
+        height: 200px;
+        border-radius: 20px;
+    }
+    .right img{
+        width: 350px;
+        height: 200px;
+        border-radius: 20px;
+    }
+    .faq{
+        display: flex;
+        flex-direction: column;
+    }
+    .text{
+        align-items: center;
+        background-color: white;
+        box-shadow: 7px 7px 2px #EEEEEE;
+        width: 50px;
+        height: 35px;
+    }
+    .blog1{
+        display: flex;
+        flex-direction: column;
+        background-color: purple;
+        /* grid-template-columns: auto; */
+    }
+    form input{
+        width: 50px;
+    }
+    #sub{
+        width: 50%;
+    }
+    .fl{
+        width: 50%;
+    }
+    textarea{
+        width: 150px;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+}
 /* Fin section a propos */
 
 
@@ -33,19 +119,189 @@
 
 
 /* Debut section faq */
+.faq{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+}
+.accordion{
+    margin-top: 20px;
+}
+.accordion span{
+    color: #008374;
+    font-weight: bold;
+}
+.accordion i{
+    float: right;
+}
+.item p{
+    color: gray;
+}
+.item h2{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.808);
+}
+.item h3{
+    font-size: 25px;
+}
+.text{
+    align-items: center;
+    background-color: white;
+    box-shadow: 7px 7px 2px #EEEEEE;
+    width: 600px;
+    height: 35px;
+}
+.text i{
+    padding-right: 10px;
+    padding-top: 5px;
 
+}
 /* Fin section faq */
 
 
 
 /* Debut section blog */
-
+.blog1{
+    margin-top: 200px;
+    align-items: center;
+    height: 500px;
+}
+.para{
+    text-align: center;
+}
+hr{
+    width: 50px;
+    height: 2px;
+    background-color: #008374;
+    border: none;
+}
+.card{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* margin: 50px 100px; */
+    justify-content: space-around;
+}
+.card1{
+    border-radius: 15px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.card1 img{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+}
+.poli{
+    margin-left: 20px;
+}
+.poli h5{
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.685);
+}
+.poli h4{
+    margin-top: -15px;
+    font-size: 18px;
+}
+.user{
+    display: flex;
+    margin-top: -15;
+}
+#mage{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.para1{
+    margin-left: 10px;
+    margin-top: -15px;
+}
+.para1 p{
+    font-size: 12px;
+    /* padding-left: 100px; */
+}
 /* Fin section blog */
 
 
 
 /* Debut section contact */
-
+.contact{
+    margin-top: 150px; 
+}
+.cont{
+    text-align: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+}
+.gau{
+    background-color: #008374;
+    width: 500px;
+}
+.droi{
+    margin-left: 30px;
+    /* width: 400px; */
+}
+.icon{
+    /* background-color: white; */
+    border-radius: 100px;  
+}
+.spa{
+    padding-left: 10px;
+}
+.spa p{
+    margin-top: -10px;
+}
+.icon i{
+    size: 50px;
+    color: white;
+    margin-top: 18px;
+    padding-top: 15px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.123);
+}
+.gau h3{
+    color: white;
+    font-size: 16px;
+}
+.gau p{
+    color: white;
+}
+.this{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.116);
+    border-radius: 15px;
+    width: 450px;
+    /* height: 10px; */
+    margin-left: 20px;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+#lik{
+   /* background-color: red; */
+   color: white;
+}
+form input{
+    width: 300px;
+    height: 30px;
+    margin-top: 20px;
+    /* border-radius: 10px;
+    border: none; */
+}
+#ml{
+    margin-left: 15px;
+}
+form ::placeholder{
+    color: rgba(0, 0, 0, 0.719);
+}
+.mess{
+    margin-top: 20px;
+}
+.subj input{
+    width: 625px;
+}
 /* Fin section contact */
 
 

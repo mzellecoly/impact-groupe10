@@ -1,5 +1,146 @@
-/* Debut section header */
+:root{
+    --gris-clair : #EEEEEE;
+    --vert : #008374 ; 
+    --vert-clair : #88C2BC ; 
+    --vert-plus-clair : #D2EEEB ; 
+    --orange : #F95F40;
+    --vert-fonce : #00796B;
+    --gris-clair : #dcdbdb
 
+}
+
+
+body{
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    font-family: Verdana;
+    font-size: 14px;
+ }
+
+main{
+    background-color: var(--vert-plus-clair);
+}
+/* Debut section header */
+header{
+    background-color: var(--vert);
+   
+
+}
+header #navbar{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--vert);
+
+   
+
+}
+/* -------------------------------DESIGN DE LA BANIERE--------------------------------- */
+header .banner{
+    background-color: var(--vert-fonce);
+    color: var(--gris-clair);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header .banner .bannerLeft{
+    display: flex;
+    float: left;
+    margin: 0px 40px 0 40px;
+
+}
+header .banner .bannerLeft .infos{
+    font-size: 10px;
+    margin: 10px;
+}
+
+header .banner .bannerRight{
+    display: flex;
+    margin: 0px 40px ;
+}
+header .banner .bannerRight ul{
+    display: flex;
+    float: left;
+    margin: 0;
+}
+header .banner .bannerRight ul li{
+   list-style: none;
+   background-color: var(--bleuclair) ;
+   margin-left: 10px;
+   border-radius: 7px;
+   padding: 5px 10px;
+
+}
+header .banner .bannerRight ul li a{
+   color: var(--blanc);
+}
+/* ---------------------------DESIGN DU MENU ET LOGO----------------------------- */
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 5px 0;
+}
+header .menu .logo span{
+    color: var(--orange);
+}
+header .menu .logo{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+header .menu .logo , header .menu .menuItems {
+    margin: 10px 40px 10px 47px ;
+
+}
+header .menu .menuItems ul  {
+    margin: 10px 40px ;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+
+}
+header .menu .menuItems ul li{
+    list-style-type: none;
+    padding: 8px;
+    margin: 0;
+    color: var(--gris-clair);
+
+
+    
+}
+header .menu .menuItems ul li a {
+    color: var(--bleuDeNuit);
+    font-size: 13px;
+    text-decoration: none;
+
+}
+header .blog-texte {
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto 0 auto;
+    width: 80%;
+    text-align: center;
+
+}
+header .blog-texte h1 {
+    color: white;
+    font-weight: normal;
+
+}
+header .blog-texte p {
+    color: var(--gris-clair);
+    line-height: 20px;
+
+}
+
+
+
+/* header .menu .menuItems ul li .active{
+    color: var(--orange);
+} */
 /* Fin section header */
 
 
@@ -9,5 +150,102 @@
 
 
 /* Debut section footer */
+/* --------------FOOTER--------------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--vert);
+    color: white;
+    /* position: absolute;
+    bottom: 0; */
+    
+}
+footer .parties{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 0 100px;
+
+}
+
+footer .partie h2{
+    margin: 10px 0;
+    
+}
+
+footer .partie div ul{
+    margin: 0;
+    padding: 0;
+}
+footer .partie div ul li {
+    list-style: none;
+    padding-bottom: 15px;
+    font-size: 11px;
+    color: #dcdbdb;
+
+}
+#text {
+    padding-bottom: 15px;
+    font-size: 11px;
+    font-weight: 100;
+    line-height: 20px;
+
+}
+footer .partie p {
+    font-weight: bold;
+    font-size: 13px;
+
+}
+footer .partie div ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+footer .parties .partie .reseauxSociaux{
+    display: flex;
+}
+footer .parties .partie .reseauxSociaux li{
+    padding-right: 10px;
+   
+}
+footer .parties .partie .reseauxSociaux li a{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 5px;
+}
+footer .bottom .copyright{
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 10px auto;
+    text-align: center;
+    line-height: 20px;
+    font-size: 11px;
+}
+footer .bottom{
+    display: flex;
+}
+footer div .floting-btn a{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    color: white;
+    background-color: var(--orange);
+    padding: 8px 10px;
+    border-radius: 50%;
+}
+#phone-email{
+    margin-top: 20px;
+}
 
 /* Fin section footer */
+
+@media screen and (width <= 768px) {
+    
+    footer .parties{
+        display: grid;
+        grid-template-columns: auto  ;
+    
+    }
+
+    /* pour portfolio */
+}

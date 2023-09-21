@@ -18,7 +18,7 @@
 
 /* Debut section sevices */
 
-.services , .teams {
+.services , .portfolios {
     display: grid;
     justify-content: center;
     grid-template-rows: auto auto;
@@ -26,7 +26,7 @@
     margin: 0 auto;
     width: 80%;
 }
-.services .ligne , .teams .ligne{
+.services .ligne , .portfolios .ligne{
     display: grid;
     grid-template-columns: auto auto auto ;
     z-index: 1;
@@ -60,7 +60,7 @@
     left: -14px;
     z-index: -1;
 }
-.services .ligne .service .service-title , .teams .ligne .team .team-title{
+.services .ligne .service .service-title , .portfolios .ligne .portfolio .portfolio-title{
     width: 39%;
     font-weight: bold;
     margin-top: 15px;
@@ -94,18 +94,18 @@
         margin-bottom: 17px;
     
     }
-    .teams .ligne{
+    .portfolios .ligne{
         display: grid;
         grid-template-columns: auto  ;
     
     }
 
-    .teams .ligne  .team{
+    .portfolios .ligne  .portfolio{
         margin-bottom: 17px;
     
     }
 
-    /* pour team */
+    /* pour portfolio */
 }
 
 /* Fin section sevices */
@@ -119,14 +119,14 @@
 
 
 
-/* Debut section team */
-.teams .ligne .team{
+/* Debut section portfolio */
+.portfolios .ligne .portfolio{
     margin-top: 40px;
 
 
 }
 
-.teams .ligne .team{
+.portfolios .ligne .portfolio{
     background-color: white;
     border-radius: 5px;
     box-shadow: 7px 7px 2px var(--gris-clair);
@@ -135,15 +135,15 @@
 
 
 }
-.teams .ligne .team .team-image {
+.portfolios .ligne .portfolio .portfolio-image {
     width: 100%;
 }
-.teams .ligne .team .team-image img{
+.portfolios .ligne .portfolio .portfolio-image img{
     width: 100%;
 }
 
 
-/* Fin section team */
+/* Fin section portfolio */
 
 
 

@@ -6,6 +6,11 @@
     --orange : #F95F40;
 
 }
+h3{
+    text-align: center;
+    color: var(--vert);
+    margin-top: 30px;
+}
 /* Debut section menu */
 
 /* Fin section menu */
@@ -18,7 +23,7 @@
 
 /* Debut section sevices */
 
-.services , .portfolios {
+.services , .portfolios  {
     display: grid;
     justify-content: center;
     grid-template-rows: auto auto;
@@ -26,7 +31,7 @@
     margin: 0 auto;
     width: 80%;
 }
-.services .ligne , .portfolios .ligne{
+.services .ligne , .portfolios .ligne  {
     display: grid;
     grid-template-columns: auto auto auto ;
     z-index: 1;
@@ -44,6 +49,10 @@
 }
 .services .ligne  .service:hover{
     background-color: var(--vert);
+    color: white;
+
+}
+.services .ligne  .service:hover #read-more{
     color: white;
 
 }
@@ -82,44 +91,101 @@
     color: var(--vert);
 }
 
-@media screen and (width <= 768px) {
-    
-    .services .ligne{
-        display: grid;
-        grid-template-columns: auto  ;
-    
-    }
 
-    .services .ligne  .service{
-        margin-bottom: 17px;
-    
-    }
-    .portfolios .ligne{
-        display: grid;
-        grid-template-columns: auto  ;
-    
-    }
-
-    .portfolios .ligne  .portfolio{
-        margin-bottom: 17px;
-    
-    }
-
-    /* pour portfolio */
-}
 
 /* Fin section sevices */
 
 
 
 
+/* Debut section team */
+
+.teams .ligne {
+    display: flex;
+    /* grid-template-columns: 15% 15% 15% 15% ; */
+    z-index: 1;
+    margin-bottom: 17px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
+
+
+
+}
+
+.teams .ligne .team{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px var(--gris-clair);
+
+
+}
+
+.teams .ligne .team .team-image{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+.teams .ligne .team .team-image img , .teams .ligne .team .reseauxSociaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.teams .ligne .team .team-title{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.teams .ligne .team .team-body{
+    font-size: 12px;
+    color: rgb(191, 187, 187);
+
+}
+
+.teams .ligne .team .reseauxSociaux {
+    margin-right: 40px;
+}
+
+.teams .ligne .team .txt{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.teams .ligne .team .reseauxSociaux li{
+        list-style: none;
+        margin: 9px;
+   
+}
+.teams .ligne .team .reseauxSociaux li a{
+    border: 1px solid var(--gris-clair);
+    border-radius: 50%;
+    padding: 5px;
+    color: var(--gris-clair);
+
+}
+
+
+/* .teams {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+} */
+
+
+/* Fin section team */
+
+
+
 /* Debut section portfolio */
 
-/* Fin section portfolio */
-
-
-
-/* Debut section portfolio */
 .portfolios .ligne .portfolio{
     margin-top: 40px;
 
@@ -142,6 +208,26 @@
     width: 100%;
 }
 
+
+/* .portfolios{
+    background-color: #F6F6F6;
+}  */
+
+.portfolios .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+.portfolios .options .option{
+    margin: 10px;
+
+}
+.portfolios .options .active{
+    color: var(--vert);
+
+}
 
 /* Fin section portfolio */
 
@@ -231,6 +317,22 @@
     transform: scale(1.2);
     border: 1px solid var(--vert);
 }
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#buttons button{
+    background-color: white;
+    border: 1px solid var(--vert);
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: var(--vert);
+}
+
+
 /* Fin section pricing */
 
 
@@ -257,3 +359,59 @@
 /* Fin section footer */
 
 
+@media screen and (width <= 768px) {
+    
+    .services .ligne  {
+        display: grid;
+        grid-template-columns: auto  ;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    
+    }
+
+    .teams .ligne {
+        display: grid;
+        grid-template-columns: auto  ;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    
+    }
+
+    .services .ligne  .service , .teams .ligne .team {
+        margin-bottom: 17px;
+
+    
+    }
+    .portfolios .ligne{
+        display: grid;
+        grid-template-columns: auto  ;
+    
+    }
+
+    .portfolios .ligne  .portfolio{
+        margin-bottom: 17px;
+    
+    }
+
+    .services .ligne{
+        display: grid;
+        grid-template-columns: auto  ;
+    
+    }
+
+    /* pour portfolio */
+}
+
+
+@media screen and (width <= 950px) and (width >= 768px){
+    .teams .ligne {
+        display: grid;
+        grid-template-columns: auto auto ;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    
+    }
+}

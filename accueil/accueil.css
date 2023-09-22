@@ -9,7 +9,16 @@
 
 }
 
-
+html{  
+    /* pour gerer la lenteur */
+    scroll-behavior: smooth;
+    /* pour gerer le défilement vertical et spéciffier les arret */
+    scroll-snap-type: y mandatory;
+    /* pour que l'arret prends la section entière */
+    scroll-padding-top: 70px;
+    /* la transition */
+    transition: scroll-snap-align 3s ease-in-out;
+}
 body{
     margin: 0 auto;
     display: grid;
@@ -26,16 +35,13 @@ main{
 /* Debut section menu */
 header{
     background-color: var(--vert);
-    height: 450px;
+    height: 500px;
 }
 header #navbar{
     position: fixed;
     z-index: 2;
     width: 100%;
     background-color: var(--vert);
-
-   
-
 }
 section{
     margin-top: 50px;
@@ -83,11 +89,12 @@ header .banner .bannerRight ul li a{
 #txt{
     display: flex;
 }
+ 
 /* ---------------------------DESIGN DU MENU ET LOGO----------------------------- */
 header .menu {
     display: flex;
     justify-content: space-between;
-    margin: 5px 0 5px 0;
+    margin: 5px 11% 5px 11%;
 }
 header .menu .logo span{
     color: var(--orange);
@@ -127,17 +134,18 @@ header .menu .menuItems ul li a {
     color: white;
 }
 #but{
-    background-color: rgba(255, 255, 255, 0.307);
+    background-color: #1A9082;
     border: none;
     border-radius: 20px;
-    padding: 7px 30px;
+    padding: 10px 35px;
+    box-shadow: 7px 4px 5px #177a6f;
 }
 #butt{
     background-color: #008374;
     border: none;
-    padding-left: 20px;
-    padding-top: 10px;
+    padding: 20px 20px;
 }
+
 #ico{
     font-size: 20px;
     margin-right: 5px;
@@ -151,14 +159,15 @@ header .blog-texte {
 
 }
 #txt{
-    justify-content: center;
-    align-items: center;
-    margin: 10% auto 0 auto;
+    
+    margin: 9% 30% 0 9%;
     width: 80%;
-    text-align: center;
     color: white;
-    padding-right: 100px;
-    padding-top: -10px;
+    display: flex;
+    justify-content: space-around;
+}
+#bg{
+    width: 130%;
 }
 header .blog-texte h1 {
     color: white;
@@ -169,6 +178,21 @@ header .blog-texte p {
     color: var(--gris-clair);
     line-height: 20px;
 }
+/* .menu-burger{
+    display: none;
+    position: absolute;
+    top: 53px;
+    right: 50px;
+
+}
+.fa-bars{
+    color: white;
+    font-size: 40px;
+}
+.menuItems.mobile-menu{
+    margin-left: 0;
+} */
+
 .crte{
     display: grid;
     grid-template-columns: 15% 15% 15% 15%;
@@ -197,37 +221,20 @@ header .blog-texte p {
 /* Debut section a propos */
 
 .sectionpropos{
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 40px;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
 }
-.left{
-    /* background-color: aqua; */
-}
-.left p{
+
+.left p , .right p , #first{
     line-height: 20px;
 }
-.right{
-    /* background-color: brown; */
-}
-.right p{
-    line-height: 20px;
-}
-.right span{
+.right span {
     line-height: 30px;
 }
-#first{
-    line-height: 20px;
-}
-.left img{
-    width: 500px;
-    height: 300px;
-    border-radius: 20px;
-}
-.right img{
+.left img , .right img{
     width: 500px;
     height: 300px;
     border-radius: 20px;
@@ -280,7 +287,7 @@ header .blog-texte p {
     z-index: -1;
 }
 .services .ligne .service .service-title , .portfolios .ligne .portfolio .portfolio-title{
-    width: 39%;
+    /* width: 39%; */
     font-weight: bold;
     margin-top: 15px;
 }
@@ -301,31 +308,6 @@ header .blog-texte p {
     color: var(--vert);
 }
 
-@media screen and (width <= 768px) {
-    
-    .services .ligne{
-        display: grid;
-        grid-template-columns: auto  ;
-    
-    }
-
-    .services .ligne  .service{
-        margin-bottom: 17px;
-    
-    }
-    .portfolios .ligne{
-        display: grid;
-        grid-template-columns: auto  ;
-    
-    }
-
-    .portfolios .ligne  .portfolio{
-        margin-bottom: 17px;
-    
-    }
-
-    /* pour portfolio */
-}
 
 /* Fin section sevices */
 
@@ -399,17 +381,12 @@ header .blog-texte p {
     align-items: center;
     margin: 0 auto;
     gap: 20px;
-
-
-
 }
 
 .teams .ligne .team{
     background-color: white;
     border-radius: 5px;
     box-shadow: 5px 5px 2px var(--gris-clair);
-
-
 }
 
 .teams .ligne .team .team-image{
@@ -433,7 +410,6 @@ header .blog-texte p {
 .teams .ligne .team .team-body{
     font-size: 12px;
     color: rgb(191, 187, 187);
-
 }
 
 .teams .ligne .team .reseauxSociaux {
@@ -444,8 +420,6 @@ header .blog-texte p {
     text-align: center;
     margin-top: 10px;
 }
-
-
 .teams .ligne .team .reseauxSociaux li{
         list-style: none;
         margin: 9px;
@@ -457,68 +431,6 @@ header .blog-texte p {
     padding: 5px;
     color: var(--gris-clair);
 
-}
-
-
-
-
-
-
-@media screen and (width <= 768px) {
-    
-    .services .ligne  {
-        display: grid;
-        grid-template-columns: auto  ;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    
-    }
-
-    .teams .ligne {
-        display: grid;
-        grid-template-columns: auto  ;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    
-    }
-
-    .services .ligne  .service , .teams .ligne .team {
-        margin-bottom: 17px;
-
-    
-    }
-    .portfolios .ligne{
-        display: grid;
-        grid-template-columns: auto  ;
-    
-    }
-
-    .portfolios .ligne  .portfolio{
-        margin-bottom: 17px;
-    
-    }
-
-    .services .ligne{
-        display: grid;
-        grid-template-columns: auto  ;
-    
-    }
-
-    /* pour portfolio */
-}
-
-
-@media screen and (width <= 950px) and (width >= 768px){
-    .teams .ligne {
-        display: grid;
-        grid-template-columns: auto auto ;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    
-    }
 }
 /* Fin section team */
 
@@ -589,8 +501,6 @@ header .blog-texte p {
 .pricings .ligne .pricing .pricing-price .dollar-indice {
     color: var(--orange);
     font-size: 19px;
-    position: relative;
-    top: -15px;
 }
 
 .pricings .ligne .pricing .pricing-price .price{
@@ -634,15 +544,8 @@ header .blog-texte p {
     justify-content: space-around;
     margin-top: 50px;
 }
-.accordion{
-    margin-top: 20px;
-}
-.accordion span{
-    color: #008374;
-    font-weight: bold;
-}
-.accordion i{
-    float: right;
+.item{
+    align-items: center;
 }
 .item p{
     color: gray;
@@ -654,18 +557,45 @@ header .blog-texte p {
 .item h3{
     font-size: 25px;
 }
-.text{
-    align-items: center;
+/* Styles pour les balises details et summary */
+details {
+    /* background-color: #f0f0f0; */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
     background-color: white;
     box-shadow: 7px 7px 2px #EEEEEE;
-    width: 600px;
-    height: 35px;
 }
-.text i{
-    padding-right: 10px;
-    padding-top: 5px;
 
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.arrow {
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+    margin-left: 60px;
+}
+
+details[open] .arrow {
+    transform: rotate(180deg);
+}
+
+/* Style lorsque les détails sont ouverts */
+details[open] {
+    background-color: #ffff;
+}
+
+.number{
+    color: var(--vert);
+    margin-right: 10px;
+}
+
 /* Fin section faq */
 
 
@@ -674,7 +604,7 @@ header .blog-texte p {
 .blog1{
     margin-top: 200px;
     align-items: center;
-    height: 500px;
+    height: auto;
 }
 .para{
     text-align: center;
@@ -900,9 +830,9 @@ footer .bottom{
     display: flex;
 }
 footer div .floting-btn a{
-    position: relative;
-    bottom: 0;
-    right: 0;
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
     color: white;
     background-color: var(--orange);
     padding: 8px 10px;
@@ -915,61 +845,217 @@ footer div .floting-btn a{
 /* Fin section footer */
 
 @media screen and (width <= 768px) {
-    
-    footer .parties{
+
+    /* .menu-burger{
+        display:block;
+        
+    }
+    .menuItems{
+        background-color: rgba(255, 255, 255, 0.535);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }*/
+    #navbar ul{
+        display: none;
+        /* flex-direction: column;
+        color: black; */
+
+    }/*
+    #navbar ul li{
+        color: black;
+        font-size: 30px;
+
+    } */
+
+    body{
+        overflow-x: hidden;
+    }
+    .crte{
         display: grid;
-        grid-template-columns: auto  ;
-    
+        grid-template-columns: 50%;
+    }
+    #bg{
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    #txt{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 10% auto;
+        align-items: center;
+        width: 50%;
     }
 
-    /* pour portfolio */
-}
+    #txt h1{
+        font-size: 15px;
+        
+    }
+    #txt p{
+        font-size: 10px;
 
-/* Fin section footer */
-@media screen and (width <= 767px) {
-    /* Insérez vos propriétés CSS ici, avec vos sélecteurs/ */
+    }
+    footer .parties{
+        display: grid;
+        grid-template-columns: auto ;
+    }
+
     .sectionpropos{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+
     }
-    .left img{
-        width: 350px;
-        height: 200px;
-        border-radius: 20px;
+    .sectionpropos h2, #sectionpropos p, .right p {
+        width: 100%;
+        text-align: justify;
+
     }
-    .right img{
-        width: 350px;
-        height: 200px;
+    .left img, .right img{
+        width: 50%;
+        height: 30%;
         border-radius: 20px;
     }
     .faq{
         flex-direction: column;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .accordion{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
     }
     .text{
         align-items: center;
         background-color: white;
         box-shadow: 7px 7px 2px #EEEEEE;
-        width: 50px;
         height: 35px;
     }
-    .blog1{
+    .card{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    .card1{
+        margin-bottom: 20px;
+    }
+    .form , .form .droit form{
+        display: flex;
         flex-direction: column;
-        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
     }
-    form input{
-        width: 50px;
+    .droi form input {
+        width: 100%;
     }
-    #sub{
-        width: 50%;
-    }
-    .fl{
-        width: 50%;
-    }
-    textarea{
-        width: 150px;
-    }
+   
     .form{
         display: flex;
         flex-direction: column;
+    }
+    #ml{
+        margin-left: 0;
+    }
+    .main{
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .services .ligne  {
+        display: grid;
+        grid-template-columns: auto  ;
+        
+    }
+
+    .teams .ligne {
+        display: grid;
+        grid-template-columns: auto  ;
+    }
+
+    .services .ligne  .service,.portfolios .ligne  .portfolio , .pricings .ligne .pricing{
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 17px auto;
+        width: 50%;
+    
+    }
+    .portfolios .ligne{
+        display: grid;
+        grid-template-columns: auto ;
+    
+    }
+    .portfolios{
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+   }
+    .services .ligne{
+        display: grid;
+        grid-template-columns: auto  ;
+    
+    }
+    .services .ligne .service .service-body .texte{
+        align-items: center;
+        width: 100%;
+    }
+
+    .pricings .ligne{
+        display: grid;
+        grid-template-columns: auto  ;
+    }
+    .pricings .ligne .pricing{
+        width: 100%;
+    }
+    #pricing2{
+        transform: scale(1);
+    }
+    .pricings .ligne .pricing .pricing-price {
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .pricings .ligne .pricing .pricing-body{
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .pricings .ligne .pricing .pricing-body p{
+        width: 100%;
+    }
+    /* pour portfolio */
+}
+
+
+@media screen and (width <= 950px) and (width > 768px){
+    .teams .ligne {
+        display: grid;
+        grid-template-columns: auto auto ;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    
+    }
+    .crte{
+        display: grid;
+        grid-template-columns: 25% 25% ;
     }
 }
